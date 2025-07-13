@@ -1,0 +1,441 @@
+--------
+Unit 1
+--------
+Q. Explain the CIA Triad.
+Ans:-
+The CIA Triad is a fundamental model in information security that stands for Confidentiality, Integrity, and Availability. These three principles are essential for ensuring secure, reliable, and trustworthy data handling and form the backbone of cybersecurity.
+
+Confidentiality:
+Ensures that sensitive information is accessible only to those with authorized access.
+Methods to maintain confidentiality include encryption, access controls, and authentication techniques.
+This principle protects against unauthorized access and data breaches.
+
+Integrity:
+Ensures that data is accurate, consistent, and has not been altered by unauthorized parties.
+Integrity is maintained through data validation, checksums, hashing, and access control.
+It protects data from accidental or malicious changes, ensuring it remains trustworthy and reliable.
+
+Availability:
+Ensures that information and systems are accessible when needed by authorized users.
+Achieving availability involves using reliable network connections, redundancy, load balancing, and regular maintenance.
+This principle helps prevent disruptions caused by attacks like Distributed Denial of Service (DDoS) and ensures continuous access.
+
+Q. Explain OSI security Architecture.
+Ans:- 
+The OSI Security Architecture is a framework that defines how security can be integrated into the Open Systems Interconnection (OSI) model to ensure that communication networks remain secure. This architecture lays out the security services, mechanisms, and the types of attacks that can be prevented at each layer of the OSI model, which is divided into seven layers. The main goal of OSI Security Architecture is to safeguard data integrity, confidentiality, and availability as it moves through the different layers of the OSI model.
+
+1. Security Services:
+Security services are functionalities designed to protect data, users, and resources. They ensure that security policies are implemented and enforced. The OSI Security Architecture defines several key security services:
+
+Authentication: Verifies the identities of users, systems, or entities involved in communication. This service ensures that the entity requesting access is who they claim to be.
+
+Access Control: Restricts access to resources based on user rights, permissions, or roles. It ensures only authorized users can access sensitive data or systems.
+
+Data Confidentiality: Ensures that sensitive data is only accessible to authorized parties by encrypting it. This service protects against unauthorized data interception.
+
+Data Integrity: Ensures that data is not altered or corrupted during transmission. Integrity checks help detect changes or tampering with the original data.
+
+Non-Repudiation: Provides proof of actions, such as sending or receiving data, to prevent parties from denying their involvement. Digital signatures are commonly used for this purpose.
+
+Availability: Ensures that data and services are accessible when needed, preventing disruption from attacks like Denial of Service (DoS).
+
+2. Security Mechanisms:
+Security mechanisms are the technical tools or methods used to implement security services. These mechanisms are designed to provide practical means of enforcing security policies at various layers of the OSI model. Common security mechanisms include:
+
+Encryption: Converts data into a form that is unreadable to unauthorized users. It ensures confidentiality and protects against eavesdropping.
+
+Digital Signatures: Used to verify the authenticity of a message or document, ensuring the sender's identity and data integrity.
+
+Access Control Mechanisms: Implements policies that govern who can access specific resources and under what conditions.
+
+Authentication Protocols: Mechanisms like passwords, biometrics, and tokens to verify the identity of users or systems.
+
+Intrusion Detection Systems (IDS): Monitors network traffic for signs of malicious activity or intrusions.
+
+Firewalls: Protects networks by filtering incoming and outgoing traffic based on security rules.
+
+3. Security Attacks:
+Security attacks are attempts to violate the security principles (confidentiality, integrity, and availability) of a system. These attacks can occur at various layers of the OSI model and can be classified into different categories based on the attacker's objectives. Some common types of attacks include:
+
+Passive Attacks: These involve unauthorized monitoring or eavesdropping on communication. Examples include sniffing and traffic analysis. The goal is to gather information without altering the data.
+
+Active Attacks: These involve actively trying to disrupt, alter, or gain unauthorized access to data. 
+Examples include:
+Man-in-the-Middle (MitM): An attacker intercepts and potentially alters communication between two parties.
+Denial of Service (DoS): An attacker floods a system or network with traffic, causing it to become unavailable to legitimate users.
+SQL Injection: A malicious attempt to execute arbitrary SQL code on a web application's database.
+
+Q.Define Attacks and its types.
+Ans:-
+Active and passive attacks are two main types of security threats to information systems and networks. Here's a simple breakdown:
+
+1. Passive Attacks
+In a passive attack, the attacker simply monitors or "listens" to the data flowing in a network without changing or interfering with it. The goal of a passive attack is to gather information without being detected.
+
+Types of Passive Attacks:
+Eavesdropping: The attacker secretly listens to network communication, hoping to capture sensitive data like passwords or personal information.
+Traffic Analysis: Even if data is encrypted, the attacker can analyze the traffic patterns (who is talking to whom, when, and how often) to gain some level of information.
+Main Point: Passive attacks are all about silently observing and collecting information without altering it. They are harder to detect because they don’t change any data.
+
+2. Active Attacks
+In an active attack, the attacker takes a more aggressive role by trying to change, interrupt, or disrupt the data flow in the network. This can involve altering data, injecting malicious data, or impersonating someone else.
+
+Types of Active Attacks:
+Man-in-the-Middle Attack: The attacker intercepts communication between two parties, making them think they are directly communicating with each other when, in reality, the attacker is controlling the exchange.
+Replay Attack: The attacker captures data sent over the network and then replays it later to trick the recipient into thinking it’s legitimate. For example, replaying a login attempt to gain access.
+Modification Attack: The attacker changes or tampers with data being sent over the network. For example, changing bank transaction details.
+Denial of Service (DoS) Attack: The attacker overwhelms a network or service to make it unusable for legitimate users, often by flooding it with too much traffic.
+Main Point: Active attacks involve actively interfering with network operations or data. They are usually easier to detect because they disrupt normal network behavior.
+
+--------
+Unit 2
+--------
+
+Q. State various applications of Cryptographic Hash Functions.
+Ans:-
+Cryptographic hash functions are widely used in many areas of security and computing because they can quickly and uniquely represent data in a small, fixed-size "hash." Here are some common applications:
+
+Password Storage:
+Instead of storing plain-text passwords, websites store the hash of a password. When you log in, the system hashes your input and compares it to the stored hash. This way, even if the database is hacked, passwords remain secure.
+
+Data Integrity Verification:
+Hash functions can check if files or messages have been tampered with. A hash of the original file is created and later compared with the current file’s hash. If they match, the file hasn’t changed.
+
+Digital Signatures:
+Hash functions help create digital signatures, which verify the authenticity of a document or message. The hash of a message is signed with a private key, and anyone with the corresponding public key can confirm it’s genuine.
+
+Message Authentication Codes (MACs):
+Hash functions combined with secret keys help create MACs, which ensure messages haven’t been altered in transit and confirm they’re from the right sender.
+
+Certificate Authorities (CAs):
+CAs use hash functions in digital certificates to secure communication in HTTPS connections, ensuring that users are connecting to legitimate websites.
+
+Q. What is known as Message Authentication Codes (MAC).
+Ans:- 
+A Message Authentication Code (MAC) is a small piece of information used to check the integrity and authenticity of a message. It confirms that the message hasn’t been changed and comes from the correct sender.
+
+Here’s how it works in simple terms:
+
+Sender and Receiver Share a Secret Key:
+Both the sender and receiver have a shared secret key that no one else knows.
+
+Creating the MAC:
+The sender combines the message and the secret key to create a unique "MAC code" (using a specific algorithm).
+This MAC code is then sent along with the message.
+
+Verifying the MAC:
+When the receiver gets the message and MAC code, they use the same secret key to generate their own MAC from the message.
+If the MAC code they create matches the MAC code sent by the sender, the message is verified as authentic and unchanged.
+
+Example: If Alice sends Bob a message like "Hello," she creates a MAC for it using the secret key they share. Bob, upon receiving "Hello" and the MAC, recreates the MAC on his end using the same key. If it matches, he knows "Hello" was sent by Alice and wasn’t altered.
+
+Why MACs Are Useful
+MACs are commonly used to:
+Verify that messages haven’t been tampered with.
+Confirm that a message is from the legitimate sender (authenticity).
+
+Q.SHA
+Ans:-
+SHA, or Secure Hash Algorithm, is a family of cryptographic hash functions that transforms data of any size into a fixed-size, unique string of numbers and letters. Hash functions like SHA are commonly used in data security to protect information integrity.
+
+How SHA Works
+SHA takes any kind of data—like a file, password, or message and converts it into a unique, fixed-length string called a hash. 
+This hash:
+Is unique: Different data should produce different hashes.
+Is fixed-length: No matter the size of the original data, the hash is always the same length.
+Can’t be reversed: You can’t go backwards from the hash to the original data, so it helps keep information secure.
+
+For example, if you input a file or a password into SHA-256 (one of the SHA algorithms), it will generate a unique 256-bit hash, which is like a digital fingerprint of the input.
+
+Why SHA Is Used
+SHA is primarily used for:
+Data Integrity: Ensuring that data hasn’t been tampered with. If even one small part of the data changes, the SHA hash will be completely different.
+Password Protection: Websites and apps use SHA to store passwords as hashes rather than in plain text, so even if data is leaked, it’s hard to retrieve the original passwords.
+Digital Signatures: Verifying that a message or document is authentic and has not been altered.
+
+Common SHA Types
+SHA-1: The first version, now outdated and insecure.
+SHA-2: A more secure, widely used version with variants like SHA-256 and SHA-512, where the number refers to the bit length of the hash.
+SHA-3: The latest version with enhanced security features, used less frequently but very secure.
+
+Q. Explain the two approaches of Digital Signatures.
+Ans:-
+1)RSA-based Digital Signatures
+In the RSA approach, digital signatures are created using RSA encryption, which relies on a pair of keys: a public key and a private key.
+
+Creating the Signature:
+
+The sender (Alice) creates a hash of the message.
+She then uses her private RSA key to encrypt this hash, creating the digital signature.
+Alice sends the original message along with the encrypted hash (the digital signature) to the receiver (Bob).
+
+Verifying the Signature:
+When Bob receives the message and digital signature, he decrypts the signature using Alice’s public RSA key.
+This reveals the original hash that Alice created.
+Bob then computes the hash of the received message on his end.
+If the two hashes match, Bob knows the message came from Alice and wasn’t altered.
+
+Summary: In RSA-based digital signatures, the sender’s private key is used to create the signature, and the sender’s public key is used by the receiver to verify it.
+
+2. DSA (Digital Signature Algorithm) or ECDSA (Elliptic Curve DSA)
+The DSA approach (and its more efficient variant ECDSA for elliptic curve cryptography) uses a different mathematical process to create and verify signatures, but the principles are similar to RSA.
+
+Creating the Signature:
+
+The sender (Alice) generates a hash of the message.
+Using her private DSA or ECDSA key, she creates a digital signature based on this hash.
+The signature includes two parts, often called 𝑟 and 𝑠 derived from the private key and the message hash.
+Alice sends both the message and the signature to the receiver (Bob).
+Verifying the Signature:
+
+When Bob receives the message and signature, he uses Alice’s public DSA or ECDSA key to verify the signature.
+Bob calculates the hash of the received message.
+Using Alice’s public key, he checks if the signature values (r and 𝑠) are valid for this hash.
+If they match, Bob confirms the message is authentic and unaltered.
+Summary: In DSA or ECDSA, the sender’s private key creates the signature, and the sender’s public key verifies it, with elliptic curve cryptography making ECDSA more efficient.
+
+Comparison
+RSA: Known for simplicity but requires larger key sizes for high security.
+DSA/ECDSA: Offers similar security to RSA but is more efficient with smaller key sizes (especially ECDSA).
+
+Q. Explain Public Key Distribution scenario in detail. simple and easy
+Ans:-
+Public Key Distribution is the process of securely sharing public keys among users so they can communicate securely using public-key cryptography. In public-key cryptography, each user has a pair of keys: a public key (shared with everyone) and a private key (kept secret). The public key is used for encryption or signature verification, while the private key is used for decryption or signing.
+
+Why Public Key Distribution is Important
+For secure communication, users need access to each other’s public keys. However, if these keys are distributed improperly, attackers could intercept or replace public keys with their own, leading to a man-in-the-middle attack. Proper distribution ensures:
+
+Authenticity: Users know the key belongs to the intended person.
+Integrity: The key hasn't been altered during transmission.
+Scenario: Public Key Distribution for Secure Email.
+
+Let’s walk through an example of using PKI for secure email communication between two users, Alice and Bob:
+
+Key Generation: Both Alice and Bob generate a pair of public and private keys.
+Digital Certificate Issuance:
+Alice and Bob each send their public key to a trusted CA, which verifies their identities and issues them digital certificates containing their public keys.
+Sharing Certificates:
+Alice sends an email to Bob, attaching her digital certificate.
+Bob verifies Alice’s certificate using the CA’s public key, ensuring it’s authentic.
+Now, Bob has Alice’s verified public key and can send her an encrypted email.
+Communication:
+Bob encrypts his email using Alice’s public key and sends it to her.
+Alice decrypts Bob’s email with her private key, knowing it’s secure.
+
+Q.What is digital certificate.
+Ans:-
+A digital certificate is an electronic document that verifies the identity of a person, organization, or device on the internet. It’s like an online ID card that shows others they can trust who you are. Digital certificates are commonly used in secure communications, like when you visit websites with "https://" in the address bar, to ensure the site is authentic and secure.
+
+What’s Inside a Digital Certificate?
+A digital certificate contains important information that helps confirm identity and enable secure connections, including:
+
+Owner's Information: The name of the person, organization, or website it’s issued to.
+Public Key: The public part of the key pair used to encrypt and verify messages. The corresponding private key is kept secret by the owner.
+Certificate Authority (CA) Information: The name of the trusted organization (CA) that issued the certificate, like VeriSign or Let’s Encrypt.
+Digital Signature of the CA: A signature from the CA that verifies the authenticity of the certificate.
+
+How Digital Certificates Work
+
+Certificate Issuance:
+The certificate owner (e.g., a website) generates a pair of keys: a public key and a private key.
+The owner sends their public key and identity information to a trusted CA.
+The CA verifies the owner’s identity and issues a digital certificate containing the public key and signed by the CA.
+
+Using a Digital Certificate:
+When you visit a secure website, your browser receives the site’s digital certificate.
+Your browser verifies the CA's digital signature on the certificate to confirm it’s authentic.
+Once verified, your browser uses the website’s public key from the certificate to establish a secure connection.
+
+Common Uses of Digital Certificates
+Secure Websites (HTTPS): Web servers use digital certificates to secure communication between the website and users.
+Email Security: Digital certificates verify the sender’s identity and encrypt the message contents.
+Software Verification: Software developers use certificates to prove that their applications are genuine and haven’t been tampered with.
+
+-----------
+#*UNIT 3*# 
+-----------
+
+Q.What are Firewalls? Explain the Types of Firewall.
+Ans:-
+A firewall is a security device or software that monitors and controls incoming and outgoing network traffic based on security rules. 
+It acts like a barrier between a trusted internal network and an untrusted external network (like the internet), deciding what traffic is allowed or blocked to protect devices and data from unauthorized access.
+
+Types of Firewalls
+Firewalls come in several types, each with its own way of filtering and monitoring traffic:
+
+Packet-Filtering Firewall:
+How it Works: Examines packets (small data units) moving in and out of the network. It checks each packet's IP address, port number, and protocol against predefined rules and either allows or blocks it.
+Advantages: Fast and efficient for basic filtering.
+Limitations: Limited protection because it doesn’t inspect the actual data in the packet.
+Use Case: Basic security at the network’s perimeter.
+
+Stateful Inspection Firewall (Dynamic Packet Filtering):
+How it Works: Tracks the state of active connections and determines whether packets are part of an existing connection. This provides a deeper layer of filtering based on the connection’s context.
+Advantages: More secure than packet-filtering firewalls as it understands connection states.
+Limitations: Can be slower than basic packet filtering due to the additional checks.
+Use Case: Commonly used in business networks for added security.
+
+Proxy Firewall (Application-Level Gateway):
+How it Works: Acts as an intermediary or proxy between users and the internet. Incoming and outgoing requests go through the firewall, which inspects them at the application level (e.g., HTTP, FTP) to ensure they’re safe.
+Advantages: High level of security since it inspects the content at the application level.
+Limitations: Slower than other types due to deeper inspection; may not support all applications.
+Use Case: Protecting networks from more sophisticated threats, such as malware in application data.
+
+Next-Generation Firewall (NGFW):
+How it Works: Combines traditional firewall functions with additional features like intrusion prevention, deep packet inspection, SSL inspection, and application control. NGFWs can identify and control applications and block threats more effectively.
+Advantages: High security, advanced threat detection and prevention.
+Limitations: More expensive and resource-intensive.
+Use Case: Protecting against complex threats in enterprise environments.
+
+Cloud Firewalls (Firewall as a Service, or FWaaS):
+How it Works: Operates in the cloud rather than on physical hardware. It filters traffic between the cloud provider’s infrastructure and a company’s private network.
+Advantages: Scalable, easy to manage remotely, and works well for cloud-based services and applications.
+Limitations: Dependent on a stable internet connection; limited control compared to on-premises firewalls.
+Use Case: Protecting cloud resources, especially for businesses with a significant cloud infrastructure
+
+Q.Explain SSL in detail.
+Ans:-
+SSL (Secure Sockets Layer) is a security technology that establishes an encrypted link between a web server and a client (such as a web browser or email client). SSL ensures that all data transmitted between the server and client remains private and secure, protecting sensitive information like passwords, credit card numbers, and personal data from being accessed by unauthorized parties. SSL has evolved into TLS (Transport Layer Security), which is an improved version, but the term "SSL" is still commonly used.
+
+How SSL Works
+SSL uses public key cryptography to secure data. Here’s a simplified step-by-step overview:
+
+Client Hello:
+When a user connects to a secure website (https://), their browser sends a request to the web server. This request, called the Client Hello, includes information about the SSL/TLS version and supported encryption methods.
+
+Server Hello and Certificate:
+The server responds with a Server Hello, confirming the SSL/TLS version and encryption method to be used.
+It also sends its SSL certificate, which contains its public key and details about the server’s identity (domain, organization, etc.). This certificate is issued by a trusted Certificate Authority (CA), which has verified the server’s identity.
+
+Certificate Verification:
+The client’s browser verifies the server's certificate against its list of trusted CAs. If the certificate is valid and trusted, the browser proceeds. Otherwise, it warns the user.
+
+Session Key Generation:
+The client then creates a unique session key for encrypting data during this session. This session key is encrypted with the server’s public key and sent to the server.
+Only the server can decrypt this session key because it holds the private key.
+
+Secure Connection Established:
+Now, both the client and server have the same session key, which is used to encrypt and decrypt the data sent between them during the session. This encryption ensures that any data exchanged remains private and secure.
+
+Key Components of SSL
+SSL Certificate: A digital certificate issued by a trusted CA that authenticates the identity of the website and provides the public key for establishing a secure connection.
+Public and Private Keys: Used in the initial steps to encrypt the session key and verify identities. Only the server knows the private key, while the public key is included in the SSL certificate.
+Session Key: A temporary key created for the session that encrypts the data transferred. This is a symmetric key, meaning both the server and client use the same key for encryption and decryption.
+
+Q.Explain Intrusion Detection systems.
+Ans:-
+An Intrusion Detection System (IDS) is a tool or software designed to monitor a network or computer system for unusual activity or signs of security breaches, such as unauthorized access, malware, or policy violations. 
+The primary goal of an IDS is to detect suspicious behavior that could indicate an attack or intrusion, allowing administrators to take action before damage occurs.
+
+IDSs work by analyzing network traffic, system files, and other data. There are two main types:
+
+Network-based IDS (NIDS): Monitors network traffic and analyzes it for suspicious patterns.
+
+Host-based IDS (HIDS): Runs on individual devices (hosts) and monitors changes to files, system logs, and processes on that specific device.
+When an IDS detects a potential threat, it can alert security personnel so they can investigate and respond. 
+Some advanced systems can even take automated actions, like blocking IP addresses temporarily. 
+However, IDSs are typically used for detection, not prevention—this role is usually fulfilled by an Intrusion Prevention System (IPS).
+
+Q.Explain the importance of web security. simple and easy
+Ans:-
+Web security is essential for protecting websites and online applications from cyber threats, which can range from data theft to unauthorized access and malware attacks. 
+
+Here’s why it’s important:
+Protects Sensitive Data: Websites often store sensitive information, such as personal details, financial data, and login credentials. Good web security helps keep this information safe from hackers and breaches.
+
+Maintains Trust: Users need to feel safe when visiting a website. Security measures like HTTPS, encryption, and secure login systems build trust, encouraging users to interact and share information.
+
+Prevents Financial Loss: Cyberattacks can lead to financial losses due to stolen data, disrupted services, and the costs of fixing breaches. Proper web security reduces the risk of these expenses.
+
+Safeguards Reputation: A security breach can harm a company’s reputation, causing users to lose confidence. A secure website helps maintain a positive reputation and user loyalty.
+
+Q.Explain Viruses and threats.
+Ans:-
+Viruses are a type of malicious software (malware) designed to infect computers and spread from one file or system to another. Like a biological virus, they can attach themselves to programs or files and activate when the infected file is opened. Once active, a virus can harm the system by corrupting files, stealing data, slowing down performance, or causing the computer to crash.
+
+Threats in cybersecurity refer to any potential danger that could harm a computer system, network, or data. Threats come in many forms, including viruses, worms, trojans, ransomware, phishing attacks, and unauthorized access. These threats can lead to data theft, system damage, and financial loss.
+
+In short, viruses are a specific type of threat that spread by infecting files, while threats is a broader term that includes all possible dangers to digital security. Protecting systems with antivirus software, firewalls, and safe online habits helps reduce the risk of both viruses and other threats.
+
+Q.PGP.
+Ans:-
+PGP (Pretty Good Privacy) is an encryption program used to protect the privacy and integrity of digital communication. It helps secure emails, files, and other data by using cryptography to make information unreadable to anyone who isn’t authorized to view it. PGP is popular for its strong security and is widely used for personal and business communications.
+
+Here’s how PGP works:
+
+Encryption: PGP uses a combination of public key and private key encryption. Each user has a unique pair of keys: a public key (which they can share) and a private key (kept secret). To send an encrypted message, the sender uses the recipient's public key, ensuring that only the recipient can decrypt it with their private key.
+
+Digital Signatures: PGP also allows users to add a digital signature to their messages. This signature verifies the sender's identity and ensures that the message hasn't been tampered with.
+
+Confidentiality and Integrity: By combining encryption and digital signatures, PGP ensures both the confidentiality (privacy) and integrity (accuracy) of digital communications.
+
+PGP is especially useful for sensitive data and is a trusted tool for secure messaging, file sharing, and protecting information from unauthorized access.
+
+Q.Write in brief about Transport Layer Security.
+Ans:-
+Transport Layer Security (TLS) is a protocol that provides encryption, authentication, and data integrity for secure communication over networks, such as the internet. It is widely used to secure data transmission between clients and servers, especially for web browsing, email, and instant messaging.
+
+Here’s a quick overview of how TLS works:
+
+Encryption: TLS encrypts data exchanged between the client and server, making it unreadable to anyone who intercepts it. This ensures the privacy of sensitive information like passwords and credit card numbers.
+
+Authentication: TLS uses certificates issued by trusted Certificate Authorities (CAs) to verify the identity of the server, and sometimes the client, ensuring that users are connecting to the correct site or service.
+
+Data Integrity: TLS includes mechanisms to detect if data has been tampered with during transmission, providing assurance that the data received is exactly as it was sent.
+
+TLS has largely replaced its predecessor, SSL (Secure Sockets Layer), and is the basis for HTTPS (secure web browsing). It is essential for protecting data confidentiality, ensuring secure internet communication, and building user trust.
+
+Q.What are the types of Intrusion Detection systems?
+Ans:-
+There are two main types of Intrusion Detection Systems (IDS), each with its unique approach to monitoring and detecting suspicious activities:
+
+Network-based Intrusion Detection System (NIDS):
+
+NIDS monitors network traffic for unusual or malicious activity.
+It analyzes data packets traveling across the network and can detect attacks like Distributed Denial of Service (DDoS), port scanning, and malware spread.
+NIDS is typically placed at strategic points, such as network gateways, to observe traffic across multiple devices.
+Host-based Intrusion Detection System (HIDS):
+
+HIDS runs on individual devices or hosts, such as computers or servers.
+It monitors files, system logs, and applications on the specific device, watching for signs of tampering, unauthorized access, or unusual behavior.
+HIDS can detect attacks that directly target the device itself, such as malware infections or unauthorized file changes.
+In addition to these, IDSs can also be categorized based on their detection methods:
+
+Signature-based IDS: Detects known threats by looking for specific patterns (signatures) in network traffic or on the host. It is effective against known attacks but cannot detect new, unknown threats.
+
+Anomaly-based IDS: Uses machine learning or statistical analysis to establish a "normal" behavior baseline and flags deviations from this baseline. It can detect unknown attacks but may generate false positives if normal activity varies widely.
+
+Q.Define Virus. State its types of Viruses
+Ans:-
+A virus is a type of malicious software (malware) designed to infect and spread across computer systems. It attaches itself to legitimate files or programs, and when the infected file is opened or executed, the virus activates and begins spreading to other files, devices, or systems. Viruses can harm systems by corrupting files, stealing data, consuming resources, or disrupting normal operations.
+
+Types of Viruses:
+
+File Infector Virus:
+Attaches itself to executable files (like .exe files).
+When the infected file is opened, the virus spreads and may infect other files or programs on the system.
+
+Macro Virus:
+Written in macro languages used by applications like Microsoft Word or Excel.
+Activates when a user opens an infected document, allowing it to spread to other documents or systems.
+
+Boot Sector Virus:
+Infects the boot sector of a hard drive or USB drive.
+Activates when the computer starts up, potentially making it difficult to detect and remove.
+
+Web Scripting Virus:
+Exploits web browser vulnerabilities to infect a user’s computer.
+Often spread through malicious code embedded in websites, which activates when the site is visited.
+
+Q.Write a short note on Honeypots.  
+Ans:-
+A honeypot is a cybersecurity tool designed to detect, deflect, or study cyberattacks by simulating a vulnerable target for attackers. Essentially, it’s a decoy system or network that appears real but is isolated from the main systems to avoid any risk to actual data or resources. Honeypots attract attackers by mimicking legitimate systems with security weaknesses.
+
+Key Functions of Honeypots:
+Attack Detection: Honeypots help identify potential attackers and detect unusual behavior patterns, alerting administrators of possible security threats.
+
+Threat Analysis: By observing attackers’ actions, honeypots gather valuable data on attack methods, tools, and techniques, helping organizations understand new threats.
+
+Decoy for Protection: Honeypots can distract attackers from real systems, wasting their time and resources and diverting attention away from sensitive data.
+
+Q.

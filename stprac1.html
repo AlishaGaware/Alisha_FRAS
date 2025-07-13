@@ -1,0 +1,20 @@
+State various applications of Cryptographic Hash Functions.
+Ans:-
+Cryptographic hash functions are widely used in many areas of security and computing because they can quickly and uniquely represent data in a small, fixed-size "hash." Here are some common applications:
+
+Password Storage:
+
+Instead of storing plain-text passwords, websites store the hash of a password. When you log in, the system hashes your input and compares it to the stored hash. This way, even if the database is hacked, passwords remain secure.
+Data Integrity Verification:
+
+Hash functions can check if files or messages have been tampered with. A hash of the original file is created and later compared with the current file’s hash. If they match, the file hasn’t changed.
+Digital Signatures:
+
+Hash functions help create digital signatures, which verify the authenticity of a document or message. The hash of a message is signed with a private key, and anyone with the corresponding public key can confirm it’s genuine.
+Message Authentication Codes (MACs):
+
+Hash functions combined with secret keys help create MACs, which ensure messages haven’t been altered in transit and confirm they’re from the right sender.
+
+Certificate Authorities (CAs):
+
+CAs use hash functions in digital certificates to secure communication in HTTPS connections, ensuring that users are connecting to legitimate websites.
